@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.sort_by { |post| post.likes.count }
   end
 
   # GET /posts/1
@@ -80,9 +80,11 @@ class PostsController < ApplicationController
       raise "Direction '#{direction}' is not a valid direction for vote method."
     end
 
+    # This will raise an exception unless it succeeds so we know the vote has
+    # been successful.
     @post.vote voter: current_user, vote: direction
 
-    redirect_to index
+    redirect_to posts_path, flash: {notice: "Vote successful."}
   end
 
 
