@@ -1,8 +1,8 @@
-== README
+# README
 
 Example of Prelang-generated Rails app (with modifications shown in demo).
 
 The demo video [can be seen here](http://prelang.com/#demo).
 
-*Note: This is a bit dated and there are some ugly commits.*
+*Note: This is a bit dated and there are some ugly commits :).*
 
