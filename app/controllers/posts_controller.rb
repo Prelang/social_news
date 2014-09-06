@@ -66,7 +66,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   #->Prelang (voting/acts_as_votable)
   def vote
 
@@ -86,7 +85,6 @@ class PostsController < ApplicationController
 
     redirect_to posts_path, flash: {notice: "Vote successful."}
   end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
